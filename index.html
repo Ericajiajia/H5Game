@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="description" content="华科老司机等级测试">
+    <meta name="keywords" content="测试游戏">
+    <meta name="author" content="BingYan">
+    <title>华科老司机测试</title>
+    <script>
+        (function setFontSize () {
+            //动态改变根节点字体大小
+            var docEle = document.documentElement,
+                    evt = "onorientationchange" in window ? "orientationchange" : "resize",
+                    fn = function() {
+                        var width = docEle.clientWidth;
+                        var height = docEle.clientHeight;
+                        var scale = (width / height) / (750 / 1206);
+                        width && (docEle.style.fontSize = width / (3.75 * scale) + "px");
+                    };
+            window.addEventListener(evt, fn, false);
+            document.addEventListener("DOMContentLoaded", fn, false);
+        })()
+        //声明站长统计_czc对象:
+        var _czc = _czc || [];
+        //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+        _czc.push(["_setAccount", "1261766671"]);
+    </script>
+    <link rel="stylesheet" href="./static/css/animate.min.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+</head>
+
+
+<body>
+<!-- <div style="margin:0 auto;display:none"><img id="wx_logo" src="./static/picture/test.png" style="width: 1000px; height: 1000px"></div> -->
+<div style="display:none">
+    <img id="first_image" src="./static/picture/share_pic.jpg" style="width:300px; height:300px; position:absolute;"/>
+</div>
+
+<!-- 版权 -->
+<div class="copy-right">
+    2017© Bingyan Studio All Rights Reserved.
+</div>
+
+<audio class="audio" loop="loop">
+    <source src="./static/audio/bg.mp3" type="audio/mp3">
+    <source src="./static/audio/bg.m4a" type="audio/mpeg" />
+    <source src="./static/audio/bg.ogg" type="audio/ogg" />
+</audio>
+<div class="loading-page">
+    <div class="loading-dog">
+    <img src="./static/picture/home_dog_left@2x.png">
+    </div>
+    <div class="progress">
+        <div class="progress-inner">
+        </div>
+    </div>
+    <span class="loading-word">
+    </span>
+</div>
+
+<!-- 开始页 -->
+<div class="container">    <!-- 首页标题 -->
+    <div class="homeTitle">
+        <span>
+            <img src="./static/picture/home_tittle_word@2x.png"/>
+            <img src="./static/picture/home_tittle_car@2x.png"/>
+        </span>
+    </div>
+    <!-- 首页小狗 -->
+    <div class="home-dog">
+        <div>
+            <img src="./static/picture/home_star@2x.png" class="homeStar1"/>
+            <img src="./static/picture/home_star@2x.png" class="homeStar2"/>
+            <img src="./static/picture/home_dialog_left@2x.png" class="homeDialog1"/>
+            <img src="./static/picture/home_dog_left@2x.png" class="homeDog1"/>
+        </div>
+        <div>
+            <img src="./static/picture/home_star@2x.png" class="homeStar3"/>
+            <img src="./static/picture/home_star@2x.png" class="homeStar4"/>
+            <img src="./static/picture/home_dialog_right@2x.png" class="homeDialog2"/>
+            <img src="./static/picture/home_dog_right@2x.png" class="homeDog2"/>    
+        </div>
+    </div>
+    <!-- 首页跳转按钮 -->
+    <div class="home-button">
+        <img src="./static/picture/home_button@2x.png"/>
+    </div>
+    <!-- 首页尾部 -->
+    <div class="home-bottom">
+    <p>30秒之内答完十道题，</p>
+    <p>开启你的飙车之旅吧</p>
+    </div>
+</div>
+
+
+
+<!-- 问题页 -->
+<div class="questionPage">
+    <!-- 星星背景 -->
+    <div class="bg-star-wrapper">
+        <img src="./static/picture/home_star@2x.png" class="questionStar1"/>
+        <img src="./static/picture/home_star@2x.png" class="questionStar2"/>
+        <img src="./static/picture/home_star@2x.png" class="questionStar3"/>
+        <img src="./static/picture/home_star@2x.png" class="questionStar4"/>
+        <img src="./static/picture/home_star@2x.png" class="questionStar5"/>
+        <img src="./static/picture/home_star@2x.png" class="questionStar6"/>
+        <img src="./static/picture/home_star@2x.png" class="questionStar7"/>
+    </div>
+    <!-- 鸡腿儿背景 -->
+    <div class="bg-chicken-wrapper">
+        <img src="./static/picture/question_chickenlegs@2x.png" class="chickenLegs1"/>
+        <img src="./static/picture/question_chickenlegs@2x.png" class="chickenLegs2"/>
+        <img src="./static/picture/question_chickenlegs@2x.png" class="chickenLegs3"/>
+        <img src="./static/picture/question_chickenlegs@2x.png" class="chickenLegs4"/>
+        <img src="./static/picture/question_chickenlegs@2x.png" class="chickenLegs5"/>
+    </div>
+    <!-- 播放器暂停按钮 -->
+    <div class="cd-control play"></div>
+    <!-- 十个问题 -->
+    <div class="bigBox0">
+        <div class="bigBox">
+            <div class="count-down animated jello">00:<span>30</span></div>
+            <div class="dialogUp homeWord animated bounceInLeft">
+                <p>在寝室打lol，用一度电花多少钱？</p>
+            </div>
+            <div class="answers">
+                <ul class="answers animated bounceInRight">
+                    <li data-a="0"><span class="answer1">A</span><div>ちは</div></li>
+                    <li data-a="0"><span class="answer2">B</span><div>안녕하세요</div></li>
+                    <li data-a="0"><span class="answer3">C</span><div>在的v你还</div></li>
+                </ul>
+            </div>
+            <div class="sideDog animated shake infinite">
+            </div>
+            <div class="pageNum animated wobble">
+                <p class="pageNumber"><span>1</span>/10</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 等级公布页 -->
+    <div class="rank-page">
+        <div class="drop-wrapper animated bounceInDown">
+            <div class="drop-clip">
+                <img src="./static/picture/result_clip@2x.png" alt="挂钩" />
+            </div>
+            <div class="drop-background">
+                <div class="drop-border">
+                    <div class="drop-card">
+                    </div>
+                    <h3 class="drop-summary">
+                    </h3>
+                    <p class="drop-detail drop-detail-one"></p>
+                    <p class="drop-detail drop-detail-two"></p>
+                    <p class="drop-goal">答对<span></span>题</p>
+                </div>
+            </div>
+        </div>
+        <div class="button-wrapper animated bounceInUp">
+            <img src="./static/picture/result_button_1@2x.png" alt="再战一次"><br/>
+            <img src="./static/picture/result_button_2@2x.png" alt="向小伙伴宣战"><br/>
+            <img src="./static/picture/result_button_3@2x.png" alt="偷看答案"><br/>
+        </div>
+    </div>
+
+
+    <!-- 分享页面 -->
+    <div class="share-page">
+        <div>
+            <img src="./static/picture/share_dog@2x.png" alt="华科老司机">
+        </div>
+        <p><span>召唤你身边的小伙伴来战</span></p>
+        <p><span>答对10题并将【转发截图】发至【iKnow华科】后台</span></p>
+        <p><span>有机会获得校园网一年充值大礼包</span></p>
+    </div>
+
+</div>
+
+
+<!-- 偷看答案页 -->
+<div class="iKnow-page">
+    <div class="iKnow-box">
+        <!-- <img src="./static/picture/iknow_qrcode@2x.png" alt="iKnow微信码"> -->
+        <!-- <p>长按识别二维码<br/>关注【iKnow华科】&nbsp;回复【答案】<br/>摇身一变华科老司机</p> -->
+        <p class="your-answer"><a href="http://mp.weixin.qq.com/s?__biz=MzA5MTg2NzYyNg==&mid=503346864&idx=1&sn=0eb1aed614a7cb6999445b3ccec4dd02&chksm=0b8106353cf68f23a7f1d8f8042306bdff94affa05138be159709ae215b6f7b14590967f6de4#rd 永久链接在这里">诺，你要的答案</a></p>
+    </div>
+</div>
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261766671'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D1261766671' type='text/javascript'%3E%3C/script%3E"));</script>
+<script src="./static/js/jweixin-1.0.0.js"></script>
+<script src="./static/js/tool.js"></script>
+<script src="./static/js/data.js"></script>
+<script src="./static/js/index.js"></script>
+</body>
+</html>

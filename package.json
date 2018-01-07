@@ -1,0 +1,18 @@
+{
+  "name": "jiajia's_first_h5",
+  "version": "1.0.0",
+  "description": "the first h5 by jiajia",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "author": "jiajia",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-font-spider": "^0.3.6"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^3.2.0"
+  }
+}
